@@ -1,0 +1,37 @@
+/* eric.busboom.org — Pinboard-inspired personal blog */
+:root {
+    --accent: #3b6ea5;
+    --accent-dark: #2a527a;
+    --accent-light: #e8f0f8;
+    --max-width: 1100px;
+}
+
+.site-title { font-family: var(--font-serif); font-size: 1.6rem; }
+
+.entry-title {
+    font-family: var(--font-serif);
+    font-size: 1.55rem;
+}
+
+.single .entry-title,
+.type-post .entry-title,
+.type-page .entry-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+}
+
+.site-header {
+    border-bottom: 2px solid var(--accent);
+}
+
+.site-sidebar .widget h3 {
+    color: var(--accent);
+}
+
+.entry-content a {
+    color: var(--accent);
+}
+
+.entry-meta {
+    font-style: italic;
+}
