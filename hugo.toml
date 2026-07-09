@@ -1,0 +1,41 @@
+baseURL = "https://eric.busboom.org/"
+languageCode = "en-us"
+title = "Eric Busboom"
+theme = "wp-static"
+paginate = 10
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "friendly"
+
+[params]
+description = "Thoughts on data, civic life, and public policy"
+blogHomepage = true
+sidebar = true
+showCategories = true
+accentColor = "#3b6ea5"
+
+[params.nav]
+# These will be set via menu below
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Professional Site"
+url = "https://ericbusboom.com"
+weight = 2
+
+[[menu.main]]
+name = "Projects"
+url = "/projects/"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 4

@@ -1,0 +1,19 @@
+<header class="site-header">
+    <div class="header-inner">
+        <div class="site-branding">
+            {{ with .Site.Params.logo }}
+            <a href="{{ $.Site.BaseURL }}" class="site-logo-link">
+                <img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="site-logo">
+            </a>
+            {{ else }}
+            <h1 class="site-title">
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            </h1>
+            {{ end }}
+            {{ with .Site.Params.subtitle }}
+            <p class="site-description">{{ . }}</p>
+            {{ end }}
+        </div>
+        {{ partial "nav.html" . }}
+    </div>
+</header>

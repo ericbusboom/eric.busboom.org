@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ $css := resources.Get "css/main.css" | minify }}
+    {{ $siteCss := resources.Get "css/site.css" }}
+    {{ if $siteCss }}
+    {{ $bundle := slice $css $siteCss }}
+    {{ $css = $bundle | resources.Concat "css/bundle.css" | minify }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <div class="site">
+        {{ partial "header.html" . }}
+        <div class="site-content">
+            <div class="content-area{{ if .Site.Params.sidebar }} has-sidebar{{ end }}">
+                <main class="site-main" id="main">
+                    {{ block "main" . }}{{ end }}
+                </main>
+                {{ if .Site.Params.sidebar }}
+                {{ partial "sidebar.html" . }}
+                {{ end }}
+            </div>
+        </div>
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

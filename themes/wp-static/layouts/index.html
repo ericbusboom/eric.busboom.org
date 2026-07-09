@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ if .Site.Params.blogHomepage }}
+<div class="post-listing">
+    {{ range .Paginator.Pages }}
+    <article class="post type-post">
+        <header class="entry-header">
+            <h2 class="entry-title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            {{ partial "post-meta.html" . }}
+        </header>
+        <div class="entry-content">
+            {{ .Summary }}
+        </div>
+        <a href="{{ .RelPermalink }}" class="read-more">Continue Reading →</a>
+    </article>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+</div>
+{{ else }}
+<article class="page">
+    {{ .Content }}
+</article>
+{{ end }}
+{{ end }}

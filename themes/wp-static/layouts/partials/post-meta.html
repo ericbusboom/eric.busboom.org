@@ -1,0 +1,6 @@
+<div class="entry-meta">
+    <time class="entry-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ with .Params.author }}
+    <span class="entry-author">by <a href="{{ "/author/" | relURL }}{{ . | urlize }}/">{{ . }}</a></span>
+    {{ end }}
+</div>

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="post type-{{ .Type }}">
+    <header class="entry-header">
+        <h1 class="entry-title">{{ .Title }}</h1>
+        {{ partial "post-meta.html" . }}
+    </header>
+    <div class="entry-content">
+        {{ .Content }}
+    </div>
+    {{ if .Params.categories }}
+    <footer class="entry-footer">
+        <span class="cat-links">Posted in
+        {{ range $i, $cat := .Params.categories }}
+        {{ if $i }}, {{ end }}<a href="{{ "/categories/" | relURL }}{{ $cat | urlize }}/">{{ $cat }}</a>
+        {{ end }}
+        </span>
+    </footer>
+    {{ end }}
+</article>
+{{ end }}

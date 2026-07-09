@@ -1,0 +1,12 @@
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+        {{ with .Site.Params.footerLinks }}
+        <nav class="footer-nav">
+            {{ range . }}
+            <a href="{{ .url | relURL }}">{{ .name }}</a>
+            {{ end }}
+        </nav>
+        {{ end }}
+    </div>
+</footer>

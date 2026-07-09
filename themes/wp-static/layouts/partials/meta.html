@@ -1,0 +1,5 @@
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
+{{ with .Site.Params.generator }}
+<meta name="generator" content="{{ . }}">
+{{ end }}

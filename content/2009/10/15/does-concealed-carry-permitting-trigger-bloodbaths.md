@@ -1,0 +1,9 @@
+---
+title: "Does Concealed Carry Permitting Trigger Bloodbaths?"
+date: 2009-10-15T00:04:16+00:00
+draft: false
+categories: ["opinion"]
+author: "eric"
+---
+
+![government-blank-pistol](/uploads/2009/10/government-blank-pistol-300x203.jpg)A common argument against concealed carry weapons permits (CCW) is that it would result in more crime, often expressed hyperbolically as precursor to a bloodbath. With 48 states allowing some form of concealed carry, we should expect that there have been enough natural experiments to answer this assertion definitively. My expectation is that the people who are likely to request a CCW are not likely to commit crimes. Criminals would carry regardless of a CCW permit, so allowing concealed carry in a state should not increase the number of criminals that have firearms. Florida has issued over [1.6 million CCW permits since 1987](<http://licgweb.doacs.state.fl.us/stats/cw_monthly.html>) and only 167 have been revoked because the permit holder committed a crime with a firearm. That implies that only 0.01% of CCW permit holders commit firearm-related crimes. Florida revoked 0.3% for all reasons combined. [North Carolina reports](<http://sbi2.jus.state.nc.us/crp/public/other/conceal/Sept302004stats.pdf>) 0.2% revocations for any reason. Since most permit holders are male (85%) , and most crimes are committed by males (91% for weapons crimes), we can compare the revocation rates to male crime rates. [There are about 300,000 assaults and robberies](<http://www.fbi.gov/ucr/cius2008/data/table_15.html>) per year committed with firearms, and about 150M men, a whole-population rate of commission of firearm-related crimes of 0.2%. This suggests that CCW permit holders commit firearm related crime at a rate of about 1/20th of the rate of the general population. You should actually feel safer among CCW holders than the average population.

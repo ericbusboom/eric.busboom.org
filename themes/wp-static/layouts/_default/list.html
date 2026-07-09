@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ range .Paginator.Pages }}
+<article class="post type-post">
+    <header class="entry-header">
+        <h2 class="entry-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </header>
+        {{ partial "post-meta.html" . }}
+    </header>
+    <div class="entry-content">
+        {{ .Summary }}
+    </div>
+    <a href="{{ .RelPermalink }}" class="read-more">Continue Reading →</a>
+</article>
+{{ end }}
+{{ partial "pagination.html" . }}
+{{ end }}

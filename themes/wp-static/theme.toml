@@ -1,0 +1,8 @@
+name = "wp-static"
+license = "MIT"
+description = "A clean Hugo theme matching WordPress site designs"
+tags = ["blog", "docs"]
+min_version = "0.120.0"
+
+[author]
+name = "Eric Busboom"
