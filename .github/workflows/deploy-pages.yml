@@ -21,7 +21,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Build
-        run: hugo --minify --buildDrafts
+        run: hugo --minify --buildDrafts --baseURL "https://ericbusboom.github.io/eric.busboom.org/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
