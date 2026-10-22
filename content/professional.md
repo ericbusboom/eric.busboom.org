@@ -1,7 +1,8 @@
 ---
-title: "Home"
+title: "Professional"
 date: 2018-08-16T18:22:22+00:00
 draft: false
+url: "/professional/"
 author: "eric"
 ---
 

@@ -6,7 +6,7 @@ categories: ["opinion"]
 author: "eric"
 ---
 
-![commies](/uploads/9/9/2009/09/commies.gif)In his [Labor Day article](<http://www.salon.com/opinion/feature/2009/09/07/labor_day/>) in Salon.com, Michael Lind satirizes free-market conservatives, who he claims believe that Laborers destroy wealth. In building that thesis, he presents a range of logical fallacies that are interesting to analyze. Mr. Lind doesn't daly. His opening sentence lays out his theme: 
+![commies](/uploads/9/2009/09/commies.gif)In his [Labor Day article](<http://www.salon.com/opinion/feature/2009/09/07/labor_day/>) in Salon.com, Michael Lind satirizes free-market conservatives, who he claims believe that Laborers destroy wealth. In building that thesis, he presents a range of logical fallacies that are interesting to analyze. Mr. Lind doesn't daly. His opening sentence lays out his theme: 
 
 > Today is Labor Day, when we celebrate the wealth destroyers – at least if the libertarian right is to be believed.
 

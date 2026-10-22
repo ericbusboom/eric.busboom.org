@@ -1,0 +1,6 @@
+{{ with .Paginator }}
+<nav class="pagination">
+{{ if .HasPrev }}<a href="{{ .Prev.URL }}" class="prev">← Newer Posts</a>{{ end }}
+{{ if .HasNext }}<a href="{{ .Next.URL }}" class="next">Older Posts →</a>{{ end }}
+</nav>
+{{ end }}

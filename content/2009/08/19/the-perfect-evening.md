@@ -8,9 +8,9 @@ author: "eric"
 
 ## The Perfect 5:00:
 
-![5-00](/uploads/2009/08/5-00-224x300.jpg) | 
+![5-00](/uploads/9/2009/08/5-00.jpg) | 
 
 ## The Perfect 5:45:
 
-![5-45](/uploads/2009/08/5-45-224x300.jpg)  
+![5-45](/uploads/9/2009/08/5-45.jpg)  
 ---|---

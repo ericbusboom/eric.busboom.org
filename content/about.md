@@ -11,5 +11,5 @@ My life consists mainly of:
 
 Before the kid and the business I used to: 
   * [Build robots](<http://159.203.100.196/eric/projects/>) and other things
-  * [Hike](</posts/2009/110-life-before-child>)
+  * [Hike](</2009/08/05/life-before-child/>)
   * Rock climb

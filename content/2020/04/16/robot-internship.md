@@ -6,4 +6,4 @@ categories: ["Activity", "Home Page Posts", "Uncategorized"]
 author: "eric"
 ---
 
-Each summer I [host 1 to 3 students to work on refurbishing a 6 axis laboratory robot arm](<http://ericbusboom.com/summer-robot-program/>), giving them practical experience with programming, electronics and industrial engineering.
+Each summer I [host 1 to 3 students to work on refurbishing a 6 axis laboratory robot arm](</summer-robot-program/>), giving them practical experience with programming, electronics and industrial engineering.

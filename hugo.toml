@@ -2,7 +2,9 @@ baseURL = "https://eric.busboom.org/"
 languageCode = "en-us"
 title = "Eric Busboom"
 theme = "wp-static"
-paginate = 10
+
+[pagination]
+pagerSize = 10
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -12,13 +14,16 @@ style = "friendly"
 
 [params]
 description = "Thoughts on data, civic life, and public policy"
-blogHomepage = true
 sidebar = true
 showCategories = true
 accentColor = "#3b6ea5"
 
-[params.nav]
-# These will be set via menu below
+# Blog posts live in date folders (/2009/07/23/...), so their type would be
+# the year. Give them all type "post" for the post lists.
+[[cascade]]
+type = "post"
+[cascade.target]
+path = "{/20*/**}"
 
 [[menu.main]]
 name = "Home"
@@ -26,8 +31,8 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Professional Site"
-url = "https://ericbusboom.com"
+name = "Professional"
+url = "/professional/"
 weight = 2
 
 [[menu.main]]
