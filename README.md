@@ -16,6 +16,16 @@ just build  # or: hugo --minify --buildDrafts
 ## Deployment
 Pushes to `main` trigger GitHub Actions → GitHub Pages.
 
+## Home page and blog
+
+The home page is the Projects page: `layouts/index.html` renders
+`content/projects/_index.md` and the project cards
+(`layouts/partials/project-list.html`, also used by `/projects/`). The blog
+post list is at `/blogs/` (`content/blogs/_index.md`, layout
+`layouts/_default/blog.html`, 10 per page); `/archives/`, `/posts/` and the
+old home pagination `/page/N/` redirect there (2026-11-05). When the post
+count passes 60, add `/page/7/` etc. only if old links need it.
+
 ## Pages are bundles
 
 Each standalone page is a directory holding its Markdown (`index.md`) and

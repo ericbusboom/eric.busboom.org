@@ -1,0 +1,21 @@
+{{/* Cards for every page with `project: true`, newest first.
+     Used by the Projects page and the home page. */}}
+<ul class="project-list">
+    {{ range (where site.RegularPages "Params.project" true).ByDate.Reverse }}
+    <li class="project-card">
+        <a class="project-thumb" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+            {{/* `image` is a file in the page's bundle (or, for older pages, a site path) */}}
+            {{ $p := . }}
+            {{ with .Params.image }}
+                {{ with $p.Resources.GetMatch . }}<img src="{{ .RelPermalink }}" alt="" loading="lazy">
+                {{ else }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+            {{ end }}
+        </a>
+        <div class="project-body">
+            <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <time class="project-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
+            {{ with .Params.summary }}<p class="project-summary">{{ . }}</p>{{ end }}
+        </div>
+    </li>
+    {{ end }}
+</ul>
