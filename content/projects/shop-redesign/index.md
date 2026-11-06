@@ -17,18 +17,13 @@ I'd like to keep all of the columns outside the garage, which leaves some long s
 
 I'd like to consult with a structural engineer to discuss the design and sketch out basic parameters to get a rough cost estimate. 
 
-![](Screenshot-2023-11-07-at-9.01.32-AM-700x547.png)
+{{< fig src="Screenshot-2023-11-07-at-9.01.32-AM-700x547.png" full="Screenshot-2023-11-07-at-9.01.32-AM.png" caption="Plan of the steel frame. Grey: the existing garage walls; brown: 4×4 steel columns; labelled white: steel beams. North is at the bottom. Click to enlarge, or [open the PDF](Garage-Rebuild.pdf)." >}}
 
 ## Photos
 
-North side garage door
+{{< fig src="Garage_N-700x525.jpeg" full="Garage_N-scaled.jpeg" caption="North side, with the garage door." >}}
 
-![](Garage_N-700x525.jpeg)
-
-West side
-
-![](Garage_W-700x525.jpeg)
-
-South West corner, showing South side. 
-
-![](Garage_SW-700x525.jpeg)
+{{< fig-row >}}
+{{< fig src="Garage_W-700x525.jpeg" full="Garage_W-scaled.jpeg" caption="West side." >}}
+{{< fig src="Garage_SW-700x525.jpeg" full="Garage_SW-scaled.jpeg" caption="South-west corner, showing the south side." >}}
+{{< /fig-row >}}

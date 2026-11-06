@@ -9,6 +9,11 @@ pagerSize = 10
 [markup.goldmark.renderer]
 unsafe = true
 
+# Lets layouts/_default/_markup/render-image.html turn a project page's
+# stand-alone image into a <figure> (a figure may not sit inside a <p>).
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+
 [markup.highlight]
 style = "friendly"
 

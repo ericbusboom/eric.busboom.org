@@ -9,15 +9,13 @@ summary: "A summer program where high school and college students rebuild and pr
 image: "IMG_4216-700x525.jpeg"
 ---
 
-![](IMG_4216-700x525.jpeg)
+{{< fig src="IMG_4216-700x525.jpeg" full="IMG_4216-scaled.jpeg" caption="The 1994 six-axis lab robot on the workbench in my shop." >}}
 
 In the summer, I run a program for High School and College students to learn about building and programming robots. The main robot we are working on is a small 6-axis lab robot, which was built in 1994. We completely replaced all of the power supply, controller hardware and software.
 
 The program is very flexible, with all dates, times and tasks customized to the availability and interests of each student. Students will meet with me, in my home workshop in Pacific Beach, San Diego, 1 to three days per week for up to 12 weeks. 
 
-![](IMG_4317-700x525.jpeg)
-
-Drew measures the distances between joints to build a kinematic model
+{{< fig src="IMG_4317-700x525.jpeg" full="IMG_4317-scaled.jpeg" float="right" caption="Drew measures the distances between joints to build a kinematic model." >}}
 
 The robot has 6 stepper motors and one rotary encoder for each join, with custom software to drive the motors and read the encoders. The software is implemented in the [Robot Operating System](<https://www.ros.org/>), running on Ubuntu Linux on a Raspberry Pi controller. The steppers are driven by custom C++ code on a [Teensy 4.0 micro controller](<https://www.pjrc.com/store/teensy40.html>), with trajectory planning implemented in Python running on the Raspberry Pi. The system has several other Arduino controllers that run the power supply and teaching pendant. All of our code and design documents [are in Github](<https://github.com/orgs/Busboombot/repositories>). 
 

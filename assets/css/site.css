@@ -78,3 +78,84 @@
 @media (max-width: 560px) {
     .app-embed iframe { height: 420px !important; }
 }
+
+/* Figures on project pages: {{< fig >}}, {{< fig-row >}} and stand-alone
+   Markdown images (layouts/_default/_markup/render-image.html). */
+.entry-content .fig { margin: 1.5rem 0; }
+.entry-content .fig img {
+    display: block;
+    width: auto;          /* never stretch a small picture past its real size */
+    max-width: 100%;
+    margin: 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+}
+.entry-content .fig a.fig-zoom { display: inline-block; max-width: 100%; cursor: zoom-in; vertical-align: top; }
+.entry-content .fig a.fig-zoom:hover img { border-color: var(--accent); }
+.entry-content .fig figcaption {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin-top: 0.45rem;
+}
+.entry-content .fig-left,
+.entry-content .fig-narrow-left { float: left; clear: left; margin: 0.35rem 1.75rem 1rem 0; }
+.entry-content .fig-right,
+.entry-content .fig-narrow-right { float: right; clear: right; margin: 0.35rem 0 1rem 1.75rem; }
+.entry-content .fig-left, .entry-content .fig-right { width: 46%; }
+.entry-content .fig-narrow-left, .entry-content .fig-narrow-right { width: 28%; }
+.entry-content .fig-left img, .entry-content .fig-right img,
+.entry-content .fig-narrow-left img, .entry-content .fig-narrow-right img { width: 100%; }
+.entry-content .fig-left a.fig-zoom, .entry-content .fig-right a.fig-zoom,
+.entry-content .fig-narrow-left a.fig-zoom, .entry-content .fig-narrow-right a.fig-zoom { display: block; }
+
+/* Text after a float should not run into the next section's heading. */
+.entry-content h2, .entry-content h3, .entry-content .fig-row,
+.entry-content .clear { clear: both; }
+.entry-content::after { content: ""; display: table; clear: both; }
+
+.entry-content .fig-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    align-items: start;
+}
+.entry-content .fig-row .fig { margin: 0; text-align: center; }
+.entry-content .fig-row .fig img { max-height: 460px; margin: 0 auto; }
+.entry-content .fig-row .fig figcaption { text-align: left; }
+
+@media (max-width: 600px) {
+    .entry-content .fig-left, .entry-content .fig-right {
+        float: none; width: auto; margin: 1.5rem 0;
+    }
+    .entry-content .fig-narrow-left, .entry-content .fig-narrow-right { width: 38%; }
+}
+
+.fig-lightbox {
+    max-width: 96vw;
+    max-height: 96vh;
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius);
+    background: #111;
+    cursor: zoom-out;
+    outline: none;
+}
+.fig-lightbox::backdrop { background: rgba(0, 0, 0, 0.82); }
+/* Fill most of the screen, even for the small 640 px pictures from 2009. */
+.fig-lightbox img { display: block; width: 94vw; height: 86vh; object-fit: contain; margin: 0 auto; }
+.fig-lightbox-caption { color: #ddd; font-size: 0.9rem; padding: 0.5rem 0.9rem; margin: 0; max-width: 70ch; }
+.fig-lightbox-caption:empty { display: none; }
+
+/* Narrow screens: the theme stacks main and sidebar with align-items:
+   flex-start, so a wide table or unbreakable line set the column's width and
+   the whole page scrolled sideways. Keep the column at screen width and let
+   wide tables scroll inside it. */
+@media (max-width: 900px) {
+    .site-main { width: 100%; }
+    .entry-content table { display: block; overflow-x: auto; width: auto; max-width: 100%; }
+    .entry-content th, .entry-content td { white-space: nowrap; }
+}

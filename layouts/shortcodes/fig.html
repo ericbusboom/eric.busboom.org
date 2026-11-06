@@ -1,0 +1,29 @@
+{{/*
+  A captioned picture that opens full size when clicked.
+
+    {{< fig src="tank.png" float="right" caption="The tank and piston" >}}
+
+  src      image in the page bundle (or a site path)
+  float    left | right  : beside the text, ~45% wide (full width on phones)
+           narrow-left | narrow-right : for tall, thin pictures (~28% wide)
+           (omitted)     : full column width
+  caption  text under the picture (also used as alt unless alt is given)
+  full     a larger file to open on click (default: src)
+
+  Wrap two or more full-width figs in {{< fig-row >}} … {{< /fig-row >}}
+  to put them side by side.
+*/}}
+{{- $src := .Get "src" -}}
+{{- $full := .Get "full" | default $src -}}
+{{- $caption := .Get "caption" -}}
+{{- $alt := .Get "alt" | default $caption -}}
+{{- $float := .Get "float" -}}
+<figure class="fig{{ with $float }} fig-{{ . }}{{ end }}">
+  <a href="{{ $full }}" class="fig-zoom" title="Click to enlarge">
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+  </a>
+  {{- with $caption }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
+{{- partial "fig-lightbox.html" .Page -}}

@@ -1,0 +1,24 @@
+{{/*
+  Markdown images. On project pages (front matter `project: true`), an image on
+  its own line becomes a captioned figure (caption = alt text) that enlarges
+  when clicked. Everywhere else the output matches Hugo's default (blog posts
+  converted from WordPress have filename alt text that makes poor captions).
+  hugo.toml sets wrapStandAloneImageWithinParagraph = false, so block images
+  are wrapped in <p> here to keep the old markup.
+*/}}
+{{- $src := .Destination | safeURL -}}
+{{- if and .IsBlock .Page.Params.project -}}
+<figure class="fig">
+  <a href="{{ $src }}" class="fig-zoom" title="Click to enlarge">
+    <img src="{{ $src }}" alt="{{ .PlainText }}" loading="lazy">
+  </a>
+  {{- with .Text }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>
+{{- partial "fig-lightbox.html" .Page -}}
+{{- else -}}
+{{- if .IsBlock }}<p>{{ end -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- if .IsBlock }}</p>{{ end -}}
+{{- end -}}

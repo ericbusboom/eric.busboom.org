@@ -1,0 +1,27 @@
+{{/* Click-to-enlarge viewer for a.fig-zoom links. Emitted once per page; the
+     argument is the Page. Used by the fig shortcode and the image render hook. */}}
+{{- if not (.Store.Get "fig-lightbox") -}}
+{{- .Store.Set "fig-lightbox" true }}
+<dialog class="fig-lightbox" aria-label="Enlarged picture">
+  <img alt="">
+  <p class="fig-lightbox-caption"></p>
+</dialog>
+<script>
+(function () {
+  var dlg = document.querySelector('.fig-lightbox');
+  if (!dlg || !dlg.showModal) return;
+  var img = dlg.querySelector('img'), cap = dlg.querySelector('.fig-lightbox-caption');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.fig-zoom');
+    if (!a) return;
+    e.preventDefault();
+    var fc = a.parentNode.querySelector('figcaption');
+    img.src = a.getAttribute('href');
+    img.alt = a.querySelector('img').alt;
+    cap.textContent = fc ? fc.textContent : '';
+    dlg.showModal();
+  });
+  dlg.addEventListener('click', function () { dlg.close(); });
+})();
+</script>
+{{- end -}}
