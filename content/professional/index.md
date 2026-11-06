@@ -2,7 +2,6 @@
 title: "Professional"
 date: 2018-08-16T18:22:22+00:00
 draft: false
-url: "/professional/"
 author: "eric"
 ---
 
@@ -42,10 +41,10 @@ I'm also an Open Source programmer with extensive contributions including:
   * [Libical](<https://libical.github.io/libical/>), the most popular implementation of the Internet protocol for exchanging calendar invitations.
 
 
-[![A logistic regression](/uploads/12/2020/04/crop-0-0-300-200-0-regression.png)](<https://water.sandiegodata.org/>)Using logistic regression on water quality data to predict beach closures.  
+[![A logistic regression](crop-0-0-300-200-0-regression.png)](<https://water.sandiegodata.org/>)Using logistic regression on water quality data to predict beach closures.  
 
 
-[![Heat map of patterns of crime](/uploads/12/2020/04/burglary.png)](<https://insights.civicknowledge.com/2019/01/crime-rhythm-maps/>)Crime Rhythm Maps, An exploration of the temporal structure of crime
+[![Heat map of patterns of crime](burglary.png)](<https://insights.civicknowledge.com/2019/01/crime-rhythm-maps/>)Crime Rhythm Maps, An exploration of the temporal structure of crime
 
 ## Organizations
 

@@ -2,19 +2,20 @@
 title: "Summer Robot Program"
 date: 2022-03-21T16:18:25+00:00
 draft: false
+aliases: ["/summer-robot-program/"]
 author: "eric"
 project: true
 summary: "A summer program where high school and college students rebuild and program a 1994 six-axis lab robot in my home workshop."
-image: "/uploads/12/2022/03/IMG_4216-700x525.jpeg"
+image: "IMG_4216-700x525.jpeg"
 ---
 
-![](/uploads/12/2022/03/IMG_4216-700x525.jpeg)
+![](IMG_4216-700x525.jpeg)
 
 In the summer, I run a program for High School and College students to learn about building and programming robots. The main robot we are working on is a small 6-axis lab robot, which was built in 1994. We completely replaced all of the power supply, controller hardware and software.
 
 The program is very flexible, with all dates, times and tasks customized to the availability and interests of each student. Students will meet with me, in my home workshop in Pacific Beach, San Diego, 1 to three days per week for up to 12 weeks. 
 
-![](/uploads/12/2022/03/IMG_4317-700x525.jpeg)
+![](IMG_4317-700x525.jpeg)
 
 Drew measures the distances between joints to build a kinematic model
 

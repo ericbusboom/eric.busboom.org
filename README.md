@@ -16,18 +16,34 @@ just build  # or: hugo --minify --buildDrafts
 ## Deployment
 Pushes to `main` trigger GitHub Actions → GitHub Pages.
 
+## Pages are bundles
+
+Each standalone page is a directory holding its Markdown (`index.md`) and
+every image or file it uses, referenced by bare filename
+(`![](relief.jpg)`):
+
+- `content/about/`, `content/professional/`
+- `content/projects/_index.md`: the Projects page itself
+- `content/projects/<slug>/`: one directory per project, served at
+  `/projects/<slug>/`
+
+Blog posts are still single files in `content/<yyyy>/<mm>/<dd>/` with images
+in `static/uploads/` (from the WordPress conversion). Reorganized 2026-11-05;
+`/shop-redesign/` and `/summer-robot-program/` redirect to their new
+`/projects/` addresses.
+
 ## Adding a project
 
-The Projects page (`content/projects.md`, layout
-`layouts/_default/projects.html`) lists every page whose front matter has
-`project: true`, newest first, as a card with `image` (thumbnail, cropped to
-4:3) and `summary`. To add one:
+The Projects page (layout `layouts/_default/projects.html`) lists every page
+whose front matter has `project: true`, newest first, as a card with `image`
+(thumbnail, cropped to 4:3) and `summary`. To add one:
 
-1. `content/<slug>.md` with `project: true`, `summary`, `image`,
-   `url: "/projects/<slug>/"`, and a `date` (sets the card's order).
-2. Images in `static/projects/<slug>/` (JPEG ≤ 1200 px wide; a cropped
+1. `content/projects/<slug>/index.md` with `project: true`, `summary`,
+   `image` (a filename in the same directory, e.g. `thumb.jpg`) and a `date`
+   (sets the card's order).
+2. Put the images in that directory (JPEG ≤ 1200 px wide; a cropped
    `thumb.jpg` for the card). Placeholders are fine to start
-   (example: `static/projects/carvera-bed-scan/rig-placeholder.svg`).
+   (example: `content/projects/carvera-bed-scan/rig-placeholder.svg`).
 3. A live demo goes in an iframe with the shortcode
    `{{< app-embed src="https://<name>.busboom.org/" title="…" height="640" >}}`
    (`layouts/shortcodes/app-embed.html`; adds an "open full screen" link).
@@ -35,7 +51,7 @@ The Projects page (`content/projects.md`, layout
    `../_infra/docker-do/AGENTS.md`, "Adding a project demo".
 4. Preview with the local stack (`../localhost`, `just up`):
    http://eric.localhost:8000/projects/. After adding a new `layouts/`
-   directory, restart the container (`docker restart localhost-eric-1`);
-   hugo server doesn't pick up new layout directories.
+   directory or changing `hugo.toml`, restart the container
+   (`docker restart localhost-eric-1`); hugo server doesn't pick those up.
 
-Example: `content/carvera-bed-scan.md` (2026-11-05).
+Example: `content/projects/carvera-bed-scan/` (2026-11-05).

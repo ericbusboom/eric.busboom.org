@@ -25,6 +25,13 @@ type = "post"
 [cascade.target]
 path = "{/20*/**}"
 
+# Project pages are bundles under content/projects/<slug>/; keep them styled
+# as ordinary pages (the theme keys title styles on type-page).
+[[cascade]]
+type = "page"
+[cascade.target]
+path = "{/projects,/projects/**}"
+
 [[menu.main]]
 name = "Home"
 url = "/"

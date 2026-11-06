@@ -10,7 +10,12 @@
         {{ range (where site.RegularPages "Params.project" true).ByDate.Reverse }}
         <li class="project-card">
             <a class="project-thumb" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-                {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+                {{/* `image` is a file in the page's bundle (or, for older pages, a site path) */}}
+                {{ $p := . }}
+                {{ with .Params.image }}
+                    {{ with $p.Resources.GetMatch . }}<img src="{{ .RelPermalink }}" alt="" loading="lazy">
+                    {{ else }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+                {{ end }}
             </a>
             <div class="project-body">
                 <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
