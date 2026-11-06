@@ -1,0 +1,16 @@
+{{/*
+  Embed a live web app (usually a demo container behind *.busboom.org).
+
+    {{< app-embed src="https://carvera.busboom.org/" title="Carvera bed scan" height="640" >}}
+
+  The app must allow eric.busboom.org in its Content-Security-Policy
+  frame-ancestors and must not send X-Frame-Options.
+*/}}
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "Interactive demo" -}}
+{{- $height := .Get "height" | default "640" -}}
+<figure class="app-embed">
+  <iframe src="{{ $src }}" title="{{ $title }}" style="height: {{ $height }}px"
+          loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+  <figcaption>{{ $title }} · <a href="{{ $src }}" target="_blank" rel="noopener">open full screen ↗</a></figcaption>
+</figure>

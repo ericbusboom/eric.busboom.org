@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="post type-page projects-page">
+    <header class="entry-header">
+        <h1 class="entry-title">{{ .Title }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content }}
+    </div>
+    <ul class="project-list">
+        {{ range (where site.RegularPages "Params.project" true).ByDate.Reverse }}
+        <li class="project-card">
+            <a class="project-thumb" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+                {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+            </a>
+            <div class="project-body">
+                <h2 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <time class="project-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>
+                {{ with .Params.summary }}<p class="project-summary">{{ . }}</p>{{ end }}
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+</article>
+{{ end }}

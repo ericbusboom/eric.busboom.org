@@ -3,6 +3,9 @@ title: "Shop Redesign"
 date: 2023-11-09T15:05:25+00:00
 draft: false
 author: "eric"
+project: true
+summary: "Plans for a steel post-and-beam frame around a 1942 garage, to carry a new roof and loft without loading the old walls."
+image: "/uploads/9/2023/11/Garage_N-700x525.jpeg"
 ---
 
 I have an old garage, built in 1942. It is built on a weak concrete pad, which is thoroughly cracked and some of the walls have settled, along with parts of the pad, by almost an inch. I'd like to build a new roof with a sturdier loft space, possibly a full-height second floor, but I can't put anything new on top of the existing walls, and I really don't want to raze the building. Additionally, the building has about a 1 foot setback, which I'd like to keep. 

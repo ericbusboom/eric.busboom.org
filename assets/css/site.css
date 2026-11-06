@@ -35,3 +35,46 @@
 .entry-meta {
     font-style: italic;
 }
+
+/* Projects page: generated list of pages with `project: true` */
+.project-list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1.25rem; }
+.project-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-alt);
+}
+.project-thumb {
+    display: block;
+    aspect-ratio: 4 / 3;
+    border-radius: calc(var(--radius) - 2px);
+    overflow: hidden;
+    background: var(--bg-darker);
+}
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-title { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.3; margin: 0 0 0.2rem; }
+.project-title a { color: var(--text); text-decoration: none; }
+.project-title a:hover { color: var(--accent); }
+.project-date { display: block; font-size: 0.85rem; color: var(--text-light); margin-bottom: 0.5rem; }
+.project-summary { margin: 0; line-height: 1.6; }
+@media (max-width: 560px) {
+    .project-card { grid-template-columns: 1fr; }
+}
+
+/* {{< app-embed >}}: a live demo app in an iframe */
+.app-embed { margin: 1.5rem 0; }
+.app-embed iframe {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #0e1116;
+}
+.app-embed figcaption { font-size: 0.85rem; color: var(--text-light); margin-top: 0.4rem; }
+@media (max-width: 560px) {
+    .app-embed iframe { height: 420px !important; }
+}

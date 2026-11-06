@@ -3,6 +3,9 @@ title: "Summer Robot Program"
 date: 2022-03-21T16:18:25+00:00
 draft: false
 author: "eric"
+project: true
+summary: "A summer program where high school and college students rebuild and program a 1994 six-axis lab robot in my home workshop."
+image: "/uploads/12/2022/03/IMG_4216-700x525.jpeg"
 ---
 
 ![](/uploads/12/2022/03/IMG_4216-700x525.jpeg)
