@@ -12,13 +12,20 @@ image: "/projects/carvera-bed-scan/thumb.jpg"
 <!-- DRAFT text, written from the project notes; pictures marked "placeholder"
 are to be replaced with real photos. -->
 
-My Makera Carvera C1 already knows exactly where its head is. This project
-uses that: a line laser and two small global-shutter cameras ride on the head,
-and the machine sweeps them across the bed. The laser draws a line on whatever
-is below it, and the height of each point shifts the line sideways in the
-camera image. Because the machine reports the head's position for every frame,
-the frames stitch into one height map of the whole bed, in the machine's own
-coordinates.
+As I've incorporated AI into more of my workflow, I've gotten to feel the
+limitations of the traditional CAD/CAM/Controller process for machining parts,
+so I've been looking for ways to automate the process more. This project adds
+stereo cameras and a line laser to the Carvera CNC's head, turning the machine
+into a 3D scanner for its own bed.The goal is to allow the machine to scan its
+bed for stock and have Claude pick the location on the stock for Z axis probing
+and cutting. 
+
+The goal is to not use any external software for making metal parts or laser
+cuts; I want to be able to just talk to Claude to design a part, review it in a
+3D viewer, and send it to the CNC for cutting. I've already got this process for
+3D printing, because my printers have a built in camera, so I want to ad those
+features to my CNC mill. 
+
 
 The 3D view below is the result. Drag to orbit, scroll to zoom, and switch
 between the photo-draped surface, the raw point cloud and height colours.
@@ -27,7 +34,11 @@ between the photo-draped surface, the raw point cloud and height colours.
 
 ## How it works
 
-![Placeholder: the scanning rig](/projects/carvera-bed-scan/rig-placeholder.svg)
+Hardware for the system is a 3D printed mount that holds the cameras and laser
+in place on the Carvera CNC's head. These are USB cameras, and the laser has a
+USB power tether, and all three connect to a USB hub mounted inside the cabinet. 
+
+<CAD model of the scanning rig>
 
 - **Calibration from known motion.** Before scanning, the head steps up and
   down over bare spoilboard. The machine's Z moves give the true distance for
