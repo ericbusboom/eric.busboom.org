@@ -60,11 +60,12 @@ RP2040 pin only supplies a few milliamps.
 
 {{< fig src="carrier-assembly.jpg" caption="The model of the RP2040-Zero on its carrier board" >}}
 
-The model of the RP2040-Zero comes from a 3D scan of the real module. The
-top and bottom were each laid flat and turned into a height map, and the
-positions and heights of the USB connector, buttons, LED and chips were
-measured from those maps. The scanned board came out at 23.53 × 18.18 mm,
-matching Waveshare's drawing of 23.5 × 18.
+We found the component positions on the RP2040-Zero by scanning a real module
+with my [Carvera bed scanner](/projects/carvera-bed-scan/), the same scanner
+this switch is for. The top and bottom scans were each laid flat and turned
+into a height map, and the positions and heights of the USB connector, buttons,
+LED and chips were measured from those maps. The scanned board came out at
+23.53 × 18.18 mm, matching Waveshare's drawing of 23.5 × 18.
 
 {{< fig src="scan-overlay.png" float="right" caption="The model's part outlines drawn over the height map of the scan" >}}
 
