@@ -30,7 +30,7 @@ This is the complete assembly, built from one parametric OpenSCAD model. It's
 interactive: you can show, ghost or hide each part, explode the assembly, cut
 sections through it, click a part to identify it, and take measurements.
 
-{{< app-embed src="https://busboombot.github.io/usb-power-switch/viewer/cable.html" title="USB power switch, cable version" height="640" >}}
+{{< app-embed src="https://busboombot.github.io/usb-power-switch/viewer/cable.html" title="USB power switch, cable version" height="640" button="Open in a new window" >}}
 
 The case comes in two versions. This one has the laser cable soldered into the
 board, held by a clamp with three ridges that bite into the jacket and closed

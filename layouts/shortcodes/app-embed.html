@@ -3,14 +3,22 @@
 
     {{< app-embed src="https://carvera.busboom.org/" title="Carvera bed scan" height="640" >}}
 
+  button   optional: text for a large link above the app that opens it in a
+           new window, for apps too cramped to use inline. Replaces the small
+           "open full screen" link in the caption.
+
   The app must allow eric.busboom.org in its Content-Security-Policy
   frame-ancestors and must not send X-Frame-Options.
 */}}
 {{- $src := .Get "src" -}}
 {{- $title := .Get "title" | default "Interactive demo" -}}
 {{- $height := .Get "height" | default "640" -}}
+{{- $button := .Get "button" -}}
 <figure class="app-embed">
+  {{- with $button }}
+  <a class="app-embed-button" href="{{ $src }}" target="_blank" rel="noopener">{{ . }}</a>
+  {{- end }}
   <iframe src="{{ $src }}" title="{{ $title }}" style="height: {{ $height }}px"
           loading="lazy" allow="fullscreen" allowfullscreen></iframe>
-  <figcaption>{{ $title }} · <a href="{{ $src }}" target="_blank" rel="noopener">open full screen ↗</a></figcaption>
+  <figcaption>{{ $title }}{{ if not $button }} · <a href="{{ $src }}" target="_blank" rel="noopener">open full screen ↗</a>{{ end }}</figcaption>
 </figure>

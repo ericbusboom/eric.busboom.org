@@ -75,6 +75,21 @@
     background: #0e1116;
 }
 .app-embed figcaption { font-size: 0.85rem; color: var(--text-light); margin-top: 0.4rem; }
+.entry-content .app-embed a.app-embed-button,
+.app-embed a.app-embed-button {
+    display: block;
+    margin-bottom: 0.75rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+.entry-content .app-embed a.app-embed-button:hover,
+.app-embed a.app-embed-button:hover { background: var(--accent-dark); color: #fff; }
 @media (max-width: 560px) {
     .app-embed iframe { height: 420px !important; }
 }
