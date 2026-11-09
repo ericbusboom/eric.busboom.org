@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 510" role="img" aria-label="Schematic: RP2040-Zero GP2 drives NPN transistor Q1 through R1; Q1 switches the laser's negative lead to ground; the laser's positive lead is on USB 5 V; R2 pulls the base to ground.">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="510" viewBox="0 0 900 510" role="img" aria-label="Schematic: RP2040-Zero GP2 drives NPN transistor Q1 through R1; Q1 switches the laser's negative lead to ground; the laser's positive lead is on USB 5 V; R2 pulls the base to ground.">
   <style>
     text { font-family: Helvetica, Arial, sans-serif; fill: #1f2933; font-size: 17px; }
     .ref { font-weight: 700; }
